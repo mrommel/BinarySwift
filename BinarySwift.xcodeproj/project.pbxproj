@@ -65,6 +65,7 @@
 		3980FC8E1CB92F840091D322 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		39EE444E1CBC542600C947A9 /* BinarySwiftTests_iOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BinarySwiftTests_iOS.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		39EE44521CBC542700C947A9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C91993A0234C837C00703353 /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +122,7 @@
 		3980FC631CB92F2C0091D322 = {
 			isa = PBXGroup;
 			children = (
+				C91993A0234C837C00703353 /* Package.swift */,
 				3980FC781CB92F520091D322 /* Source */,
 				2009DE4E1CBBC99300A4BC50 /* Test Source */,
 				3980FC6F1CB92F2C0091D322 /* BinarySwift_OSX */,
@@ -311,6 +313,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 			);
 			mainGroup = 3980FC631CB92F2C0091D322;
