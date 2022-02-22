@@ -191,4 +191,20 @@ open class BinaryDataReader {
         readIndex += length
         return subdata
     }
+
+    /**
+   sets the read index
+
+   - parameter offset: new read index
+
+   - throws: `BinaryDataErrors.invalidIndex` if index is set outside of data
+   */
+    func seek(_ offset: Int) throws {
+
+        if offset < 0 || offset > self.data.count {
+            throw BinaryDataErrors.invalidIndex
+        }
+
+        self.readIndex = offset
+    }
 }

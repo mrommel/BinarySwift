@@ -325,4 +325,8 @@ public struct BinaryData: ExpressibleByArrayLiteral {
             throw BinaryDataErrors.notEnoughData
         }
     }
+
+    public var count: Int {
+        return self.data.count
+    }
 }
