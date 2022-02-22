@@ -19,11 +19,11 @@ Pod::Spec.new do |s|
                     - UTF8 String of known size
                    DESC
 
-  s.homepage     = "https://github.com/Szaq/BinarySwift.git"
+  s.homepage     = "https://github.com/mrommel/BinarySwift.git"
 
   s.license      = { :type => 'BSD', :file => "LICENSE"}
 
-  s.author    = "Łukasz Kwoska"
+  s.author    = "Łukasz Kwoska, Michael Rommel"
 
   s.ios.deployment_target = "8.0"
   s.osx.deployment_target = "10.9"
