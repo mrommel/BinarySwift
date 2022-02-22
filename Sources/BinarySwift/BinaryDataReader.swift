@@ -179,13 +179,13 @@ open class BinaryDataReader {
     }
 
     /**
-   Get subdata at current offset and increase offset.
-   
-   - parameter length: String length in bytes.
-   
-   - returns: `BinaryData` subdata starting at `offset` with given `length`.
-   - throws: `BinaryDataErrors.NotEnoughData` if there is not enough data.
-   */
+     Get subdata at current offset and increase offset.
+     
+     - parameter length: String length in bytes.
+     
+     - returns: `BinaryData` subdata starting at `offset` with given `length`.
+     - throws: `BinaryDataErrors.NotEnoughData` if there is not enough data.
+     */
     open func read(_ length: Int) throws -> BinaryData {
         let subdata = try data.subData(readIndex, length)
         readIndex += length
@@ -193,13 +193,13 @@ open class BinaryDataReader {
     }
 
     /**
-   sets the read index
+     sets the read index
 
-   - parameter offset: new read index
+     - parameter offset: new read index
 
-   - throws: `BinaryDataErrors.invalidIndex` if index is set outside of data
-   */
-    func seek(_ offset: Int) throws {
+     - throws: `BinaryDataErrors.invalidIndex` if index is set outside of data
+     */
+    open func seek(_ offset: Int) throws {
 
         if offset < 0 || offset > self.data.count {
             throw BinaryDataErrors.invalidIndex
