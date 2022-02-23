@@ -10,8 +10,14 @@ import Foundation
 
 ///Wrapper on `BinaryReader` which is reference type and keeps current offset.
 open class BinaryDataReader {
+
     public private(set) var readIndex: Int
-    let data: BinaryData
+    private let data: BinaryData
+
+    /// can the reader get another byte?
+    public var canRead: Bool {
+        return self.readIndex < self.data.count
+    }
 
     /**
    Initialize `BinaryDataReader`

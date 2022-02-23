@@ -1,5 +1,4 @@
-[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage) ![platforms](https://img.shields.io/badge/platforms-iOS%20%7C%20OSX
--333333.svg) ![pod](https://img.shields.io/cocoapods/v/BinarySwift.svg)[![Build Status](https://travis-ci.org/Szaq/BinarySwift.svg?branch=master)](https://travis-ci.org/Szaq/BinarySwift)
+[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage) ![platforms](https://img.shields.io/badge/platforms-iOS%20%7C%20OSX-333333.svg) ![pod](https://img.shields.io/cocoapods/v/BinarySwift.svg)[![Build Status](https://travis-ci.org/Szaq/BinarySwift.svg?branch=master)](https://travis-ci.org/Szaq/BinarySwift)
 # BinarySwift
 
 BinarySwift is a pure-swift library for parsing binary data. It contains two components - BinaryReader which can be used to parse
@@ -76,17 +75,18 @@ let nsData = ...
 let data = BinaryData(data: nsData)
 let reader = BinaryDataReader(data)
 
-let header = IPHeader(version: try reader.read(),
-                    headerLength: try reader.read(),
-                    typeOfService: try reader.read(),
-                    length: try reader.read(),
-                    id: try reader.read(),
-                    offset: try reader.read(),
-                    timeToLive: try reader.read(),
-                    proto: try reader.read(),
-                    checksum: try reader.read(),
-                    source: in_addr(s_addr: try reader.read()),
-                    destination: in_addr(s_addr: try reader.read()))
+let header = IPHeader(
+	version: try reader.read(),
+	headerLength: try reader.read(),
+	typeOfService: try reader.read(),
+	length: try reader.read(),
+	id: try reader.read(),
+	offset: try reader.read(),
+	timeToLive: try reader.read(),
+	proto: try reader.read(),
+	checksum: try reader.read(),
+	source: in_addr(s_addr: try reader.read()),
+	destination: in_addr(s_addr: try reader.read()))
 
 ```
 You can even pass `reader` down to other functions, because it is a `class` and reference semantics applies.
