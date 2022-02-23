@@ -207,4 +207,20 @@ open class BinaryDataReader {
 
         self.readIndex = offset
     }
+
+    /**
+     skip `count` number of bytes
+
+     - parameter count: amount of bytes to skip
+
+     - throws: `BinaryDataErrors.invalidIndex` if new index is set outside of data
+     */
+    open func skip(_ count: Int) throws {
+
+        if self.readIndex + count < 0 || self.readIndex + count > self.data.count {
+            throw BinaryDataErrors.invalidIndex
+        }
+
+        self.readIndex += count
+    }
 }
